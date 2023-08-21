@@ -1,0 +1,52 @@
+plugins {
+	id "fabric-loom" version "$loom_version"
+	id "legacy-looming" version "$legacy_looming_version"
+	id "io.github.juuxel.loom-vineflower" version "$loom_vineflower_version"
+}
+
+version = "$mod_version+$target_version"
+
+base {
+	//noinspection GrDeprecatedAPIUsage
+	archivesBaseName = archives_base_name
+}
+
+repositories {
+	maven { url "https://jitpack.io" }
+	flatDir { dirs "libs" }
+}
+
+dependencies {
+	minecraft "com.mojang:minecraft:$minecraft_version"
+	mappings(legacy.yarn(minecraft_version, yarn_build))
+	modImplementation "net.fabricmc:fabric-loader:$loader_version"
+}
+
+processResources {
+	inputs.property "version", version
+
+	filesMatching("fabric.mod.json") {
+		expand "version": version
+	}
+}
+
+tasks.withType(JavaCompile).configureEach {
+	it.options.encoding = "UTF-8"
+	it.options.release.set(8)
+}
+
+java {
+	// withSourcesJar()
+	sourceCompatibility = JavaVersion.VERSION_1_8
+	targetCompatibility = JavaVersion.VERSION_1_8
+}
+
+jar {
+	from("LICENSE") {
+		rename { "${it}_${base.archivesName.get()}" }
+	}
+}
+
+vineflower {
+	toolVersion = vineflower_version
+}
