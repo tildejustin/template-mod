@@ -1,6 +1,5 @@
 plugins {
 	id "fabric-loom" version "$loom_version"
-	id "legacy-looming" version "$legacy_looming_version"
 	id "io.github.juuxel.loom-vineflower" version "$loom_vineflower_version"
 }
 
@@ -18,7 +17,8 @@ repositories {
 
 dependencies {
 	minecraft "com.mojang:minecraft:$minecraft_version"
-	mappings(legacy.yarn(minecraft_version, yarn_build))
+	// mappings "net.fabricmc:yarn:$minecraft_version+build.$yarn_build:v2"
+	mappings "com.github.RedLime:yarn:${minecraft_version}.build.$yarn_build:v2"
 	modImplementation "net.fabricmc:fabric-loader:$loader_version"
 }
 
