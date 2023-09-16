@@ -6,8 +6,7 @@ plugins {
 version = "$mod_version+$target_version"
 
 base {
-	//noinspection GrDeprecatedAPIUsage
-	archivesBaseName = archives_base_name
+	archivesName = archives_name
 }
 
 repositories {
