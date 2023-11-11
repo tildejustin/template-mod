@@ -1,6 +1,6 @@
 plugins {
-    id "fabric-loom" version "$loom_version"
-    id "legacy-looming" version "$legacy_looming_version"
+    alias libs.plugins.fabric.loom
+    alias libs.plugins.legacy.looming
     id "maven-publish"
 }
 
@@ -13,17 +13,17 @@ base {
 
 repositories {
     maven { url "https://jitpack.io" }
-    flatDir { dirs "libs" }
+    // flatDir { dirs "libs" }
 }
 
-//loom {
-//	legacyLooming.setIntermediaryVersion(2)
-//}
+// loom {
+//     legacyLooming.setIntermediaryVersion(2)
+// }
 
 dependencies {
-    minecraft "com.mojang:minecraft:$minecraft_version"
-    mappings(legacy.yarn(minecraft_version, yarn_build))
-    modImplementation "net.fabricmc:fabric-loader:$loader_version"
+    minecraft libs.minecraft
+    mappings legacy.yarn(libs.versions.minecraft.get(), libs.versions.yarn.build.get())
+    modImplementation libs.fabric.loader
 }
 
 processResources {
