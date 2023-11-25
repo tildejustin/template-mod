@@ -17,7 +17,7 @@ repositories {
 
 dependencies {
     minecraft libs.minecraft
-    mappings variantOf(libs.yarn.mappings) { classifier "v2" }
+    mappings variantOf(libs.yarn.mappings) { classifier "" } // v2 for non-Jitpack mappings
     modImplementation libs.fabric.loader
 }
 
