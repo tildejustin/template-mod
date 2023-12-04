@@ -12,18 +12,32 @@ base {
 }
 
 repositories {
-    maven { url "https://jitpack.io" }
+    maven { url "https://s01.oss.sonatype.org/content/repositories/snapshots" }
+    // maven { url "https://jitpack.io" }
     // flatDir { dirs "libs" }
 }
 
-// loom {
-//     legacyLooming.setIntermediaryVersion(2)
-// }
+loom {
+    // runs {
+    //     client {
+    //         programArgs "--userProperties", "{}"
+    //     }
+    // }
+    // legacyLooming.setIntermediaryVersion(2)
+    decompilers {
+        vineflower {
+            options.put("mark-corresponding-synthetics", "1")
+        }
+    }
+}
 
 dependencies {
     minecraft libs.minecraft
     mappings legacy.yarn(libs.versions.minecraft.get(), libs.versions.yarn.build.get())
     modImplementation libs.fabric.loader
+
+    runtimeOnly libs.vineflower
+    vineflowerDecompilerClasspath libs.vineflower
 }
 
 processResources {
