@@ -18,25 +18,20 @@ repositories {
 }
 
 loom {
-    // runs {
-    //     client {
-    //         programArgs "--userProperties", "{}"
-    //     }
-    // }
-    // legacyLooming.setIntermediaryVersion(2)
     decompilers {
         vineflower {
             options.put("mark-corresponding-synthetics", "1")
+            options.put("ind", "    ")
         }
     }
+    // runs.client.programArgs "--userProperties", "{}"
+    // legacyLooming.setIntermediaryVersion(2)
 }
 
 dependencies {
     minecraft libs.minecraft
     mappings legacy.yarn(libs.versions.minecraft.get(), libs.versions.yarn.build.get())
     modImplementation libs.fabric.loader
-
-    runtimeOnly libs.vineflower
     vineflowerDecompilerClasspath libs.vineflower
 }
 
@@ -52,7 +47,6 @@ tasks.withType(JavaCompile).configureEach {
 }
 
 java {
-    // withSourcesJar()
     sourceCompatibility = JavaVersion.VERSION_1_8
     targetCompatibility = JavaVersion.VERSION_1_8
 }
