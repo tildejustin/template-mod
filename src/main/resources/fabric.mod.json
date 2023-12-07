@@ -18,6 +18,7 @@
     "modid.mixins.json"
   ],
   "depends": {
-    "minecraft": "*"
+    "minecraft": "*",
+    "fabric-loader": ">=0.15.0"
   }
 }
