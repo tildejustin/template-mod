@@ -19,8 +19,7 @@ repositories {
 loom {
     decompilers {
         vineflower {
-            options.put("mark-corresponding-synthetics", "1")
-            options.put("ind", "    ")
+            options.putAll(["mark-corresponding-synthetics": "1", "ind": "    "])
         }
     }
 }
@@ -46,6 +45,7 @@ tasks.withType(JavaCompile).configureEach {
 java {
     sourceCompatibility = JavaVersion.VERSION_1_8
     targetCompatibility = JavaVersion.VERSION_1_8
+    // withSourcesJar()
 }
 
 jar {
