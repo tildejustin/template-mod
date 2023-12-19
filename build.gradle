@@ -39,12 +39,11 @@ processResources {
 
 tasks.withType(JavaCompile).configureEach {
     it.options.encoding = "UTF-8"
-    it.options.release.set(8)
+    if (JavaVersion.current().isJava9Compatible()) it.options.release.set(8)
 }
 
 java {
-    sourceCompatibility = JavaVersion.VERSION_1_8
-    targetCompatibility = JavaVersion.VERSION_1_8
+    sourceCompatibility = targetCompatibility = JavaVersion.VERSION_1_8
     // withSourcesJar()
 }
 
