@@ -22,9 +22,6 @@ loom {
             options.putAll(["mark-corresponding-synthetics": "1", "ind": "    "])
         }
     }
-    runConfigs.configureEach {
-        ideConfigGenerated = false
-    }
 }
 
 dependencies {
