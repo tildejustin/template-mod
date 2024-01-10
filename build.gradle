@@ -32,7 +32,7 @@ dependencies {
 }
 
 processResources {
-    filesMatching("fabric.mod.json") {
+    filesMatching "fabric.mod.json", {
         expand "version": version
     }
 }
@@ -44,11 +44,10 @@ tasks.withType(JavaCompile).configureEach {
 
 java {
     sourceCompatibility = targetCompatibility = JavaVersion.VERSION_1_8
-    // withSourcesJar()
 }
 
 jar {
-    from("LICENSE")
+    from "LICENSE"
 }
 
 publishing {
