@@ -59,3 +59,8 @@ publishing {
     }
     repositories {}
 }
+
+tasks.withType(AbstractArchiveTask).configureEach {
+    preserveFileTimestamps = false
+    reproducibleFileOrder = true
+}
