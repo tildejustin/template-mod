@@ -23,6 +23,9 @@ loom {
             options.putAll(["mark-corresponding-synthetics": "1", "ind": "    "])
         }
     }
+    mixin {
+        useLegacyMixinAp = false
+    }
     // runs.client.programArgs "--userProperties", "{}"
     // legacyLooming.setIntermediaryVersion(2)
 }
@@ -58,9 +61,4 @@ publishing {
         from components.java
     }
     repositories {}
-}
-
-tasks.withType(AbstractArchiveTask).configureEach {
-    preserveFileTimestamps = false
-    reproducibleFileOrder = true
 }
