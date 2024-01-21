@@ -22,6 +22,9 @@ loom {
             options.putAll(["mark-corresponding-synthetics": "1", "ind": "    "])
         }
     }
+    mixin {
+        useLegacyMixinAp = false
+    }
 }
 
 dependencies {
@@ -55,9 +58,4 @@ publishing {
         from components.java
     }
     repositories {}
-}
-
-tasks.withType(AbstractArchiveTask).configureEach {
-    preserveFileTimestamps = false
-    reproducibleFileOrder = true
 }
