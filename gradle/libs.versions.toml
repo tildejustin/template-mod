@@ -3,7 +3,7 @@ minecraft = "1.12.2"
 yarn_build = "533"
 fabric_loader = "0.15.5"
 loom = "1.5-SNAPSHOT"
-legacy-looming = "1.4-SNAPSHOT"
+legacy-looming = "1.5-SNAPSHOT"
 vineflower = "1.10.0-SNAPSHOT"
 
 [libraries]
