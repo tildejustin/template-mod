@@ -2,7 +2,7 @@
 minecraft = "1.16.1"
 yarn_mappings = "1.16.1-build.22"
 fabric_loader = "0.15.7"
-loom = "1.5-SNAPSHOT"
+loom = "1.6-SNAPSHOT"
 vineflower = "1.10.0-SNAPSHOT"
 
 [libraries]
