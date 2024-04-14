@@ -19,7 +19,7 @@ repositories {
 loom {
     decompilers {
         vineflower {
-            options.putAll(["mark-corresponding-synthetics": "1", "ind": "    "])
+            options.putAll(["mark-corresponding-synthetics": "1", "indent-string": "    "])
         }
     }
     mixin {
