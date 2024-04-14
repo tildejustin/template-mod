@@ -1,7 +1,7 @@
 [versions]
 minecraft = "1.12.2"
 yarn_build = "541"
-fabric_loader = "0.15.7"
+fabric_loader = "0.15.10"
 loom = "1.6-SNAPSHOT"
 legacy-looming = "1.6-SNAPSHOT"
 vineflower = "1.11.0-SNAPSHOT"
