@@ -2,8 +2,8 @@
 minecraft = "1.16.1"
 yarn_mappings = "1.16.1-build.22"
 fabric_loader = "0.15.11"
-loom = "1.6-SNAPSHOT"
-vineflower = "1.11.0-SNAPSHOT"
+loom = "1.7-SNAPSHOT"
+vineflower = "1.10.1"
 
 [libraries]
 minecraft = { module = "com.mojang:minecraft", version.ref = "minecraft" }
