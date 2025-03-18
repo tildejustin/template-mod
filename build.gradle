@@ -35,7 +35,6 @@ dependencies {
     minecraft libs.minecraft
     mappings legacy.yarn(libs.versions.minecraft.get(), libs.versions.yarn.build.get())
     modImplementation libs.fabric.loader
-    vineflowerDecompilerClasspath libs.vineflower
 }
 
 processResources {
