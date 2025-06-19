@@ -1,7 +1,7 @@
 [versions]
 minecraft = "1.12.2"
-yarn_build = "565"
-fabric_loader = "0.16.10"
+yarn_build = "569"
+fabric_loader = "0.16.14"
 loom = "1.10-SNAPSHOT"
 legacy-looming = "1.10-SNAPSHOT"
 
