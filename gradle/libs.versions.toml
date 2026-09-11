@@ -1,8 +1,8 @@
 [versions]
 minecraft = "1.16.1"
 yarn_mappings = "1.16.1-build.28"
-fabric_loader = "0.19.2"
-loom = "1.16-SNAPSHOT"
+fabric_loader = "0.19.5"
+loom = "1.17-SNAPSHOT"
 
 [libraries]
 minecraft = { module = "com.mojang:minecraft", version.ref = "minecraft" }
